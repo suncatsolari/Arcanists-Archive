@@ -5,7 +5,7 @@
 		<description>All indexs managed by the Aurora Legacy Team.</description>
 		<author url="https://github.com/AuroraLegacy/elements">Aurora Legacy Team</author>
 		<update version="0.0.1">
-			<file name="AuroraLegacy.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/AuroraLegacy.index" />
+			<file name="Woods.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/Woods.index" />
 		</update>
 	</info>
 	<files>
