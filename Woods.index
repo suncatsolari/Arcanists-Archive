@@ -12,6 +12,6 @@
 		<file name="core.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/core.index" />
 		<file name="supplements.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements.index" />
 		<file name="unearthed-arcana.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/unearthed-arcana.index" />
-		
+		<file name="homebrew.index" url="https://raw.githubusercontent.com/suncatsolari/Arcanists-Archive/master/homebrew.index" />
 	</files>
 </index>
