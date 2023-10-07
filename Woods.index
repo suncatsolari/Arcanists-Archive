@@ -5,12 +5,13 @@
 		<description>All indexs managed by the Aurora Legacy Team.</description>
 		<author url="https://github.com/AuroraLegacy/elements">Aurora Legacy Team</author>
 		<update version="0.0.1">
-			<file name="Woods.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/Woods.index" />
+			<file name="Woods.index" url="https://raw.githubusercontent.com/suncatsolari/Arcanists-Archive/master/Woods.index" />
 		</update>
 	</info>
 	<files>
 		<file name="core.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/core.index" />
 		<file name="supplements.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/supplements.index" />
 		<file name="unearthed-arcana.index" url="https://raw.githubusercontent.com/AuroraLegacy/elements/master/unearthed-arcana.index" />
+		
 	</files>
 </index>
