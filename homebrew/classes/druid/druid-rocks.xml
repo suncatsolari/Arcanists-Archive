@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+    <info>
+        <name>Circle of the Rocks</name>
+        <update version="0.0.1">
+            <file name="druid-rocks.xml" url="https://raw.githubusercontent.com/suncatsolari/Arcanists-Archive/master/homebrew/classes/druid/druid-rocks.xml" />
+        </update>
+    </info>
+    <element name="Circle of the Rocks" type="Archetype" source="source" id="ID_AA_ARCHETYPE_DRUID_CIRCLE_OF_THE_ROCKS">
+        <supports>Druid Circle</supports>
+        <description>
+            <p>Mountains and peaks are a harsh, desolate place, resulting in those who draw power from the stone being able to withstand the harshest punishment nature has to offer. These druids are notoriously brutish and cunning, using their survival wits to thwart enemies and strike down with monumental strength.</p>
+            <div element="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_STONESKIN" />
+            <div element="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_MIGHT_OF_THE_MOUNTAIN" />
+            <div element="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_AVALANCHE" />
+            <div element="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_JAGGED_PEAK" />
+            <div element="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_WRATH_OF_THE_MOUNTAIN" />
+        </description>
+        <sheet display="false">
+            <description>These druids are notoriously brutish and cunning, using their survival wits to thwart enemies and strike down with monumental strength.</description>
+        </sheet>
+        <rules>
+            <grant type="Archetype Feature" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_STONESKIN" level="2" />
+            <grant type="Archetype Feature" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_MIGHT_OF_THE_MOUNTAIN" level="2" />
+            <grant type="Archetype Feature" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_AVALANCHE" level="6" />
+            <grant type="Archetype Feature" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_JAGGED_PEAK" level="10" />
+            <grant type="Archetype Feature" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_WRATH_OF_THE_MOUNTAIN" level="14" />
+        </rules>
+    </element>
+    <element name="Stoneskin" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_STONESKIN">
+        <description>
+            <p>Starting at 2nd level, your skin takes on the hue of stone. While you aren’t wearing armour, your AC equals 12 + Your Wisdom Modifier. You may use a shield and still gain the benefits of this feature.</p>
+        </description>
+        <sheet>
+            <description>
+            <p>While you aren’t wearing armour, your AC equals {{ac:stoneskin}}. You may use a shield and still gain the benefits of this feature.</p>
+            </description>
+        </sheet>
+        <rules>
+            <stat name="ac:stoneskin base" value="12" />
+            <stat name="ac:stoneskin" value="ac:stoneskin base" bonus="wisdom:modifier" />
+        </rules>
+    </element>
+    <element name="Might of the Mountain" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_MIGHT_OF_THE_MOUNTAIN">
+        <description>
+            <p>In addition at 2nd level, you gain the ability to take on additional energies of the mountains for a temporary time, changing your bodily appearance and strength as you do so. As a bonus action, you may expend one use of your Wild Shape. For the next 10 minutes or until you expend another Wild Shape, you gain the following benefits:</p>
+            <p class="indent">You deal additional damage with melee weapon attacks and unarmed attacks equal to your Wisdom Modifier.</p>
+            <p class="indent">You gain an unarmed attack which deals 1d6 bludgeoning, piercing or slashing damage (your choice when you enter the form). This damage increases to 1d8 at 6th level in this subclass, and 1d10 at 14th level.</p>
+            <p class="indent">Your current hit points and maximum hit points increase by an amount equal to your Druid level plus your Wisdom modifier</p>
+        </description>
+        <sheet>
+            <description>
+            <p>As a bonus action, you may expend one use of your Wild Shape. For the next 10 minutes or until you expend another Wild Shape, you gain the following benefits:</p>
+            <p class="indent">You deal {{wisdom:modifier}} additional damage with melee weapon attacks and unarmed attacks</p>
+            <p class="indent">You gain an unarmed attack which deals 1d6 bludgeoning, piercing or slashing damage (your choice when you enter the form). This damage increases to 1d8 at 6th level in this subclass, and 1d10 at 14th level.</p>
+            <p class="indent">Your current hit points and maximum hit points increase by an amount equal to your Druid level plus your Wisdom modifier</p>
+            </description>
+        </sheet>
+        <rules>
+            <stat name="unarmed damage:dice" value="6" />
+            <stat name="unarmed damage:dice" value="8" level="6" />
+            <stat name="unarmed damage:dice" value="10" level="14" />
+        </rules>
+    </element>
+    <element name="Avalanche" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_AVALANCHE">
+        <description>
+            <p>Mountainous warriors certainly know how to get the drop on their targets. At 6th level, while you are under the effects of Might of the Mountain, you may use your action to move up to half your walking speed and make a total of two melee weapon attacks or two unarmed attacks against creature(s) within your reach.</p>
+        </description>
+        <sheet>
+            <description>
+            <p>While you are under the effects of Might of the Mountain, you may use your action to move up to {{avalanche:speed}} feet and make a total of two melee weapon attacks or two unarmed attacks against creature(s) within your reach.</p>
+            </description>
+        </sheet>
+        <rules>
+            <stat name="avalanche:speed" value="speed:half" />
+        </rules>
+    </element>
+    <element name="Jagged Peak" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_JAGGED_PEAK">
+        <description>
+            <p>At 10th level, after you take damage from a creature you can see within 30 feet of you, you may use your reaction to strike back with sharp rocks from your skin. That creature must succeed on a Dexterity Saving throw against your spellcasting DC or take magical piercing damage equal to 2d8 + your Wisdom Modifier. You can use this feature a number of times equal to your Wisdom modifier, regaining all uses at the end of a Long rest.</p>
+        </description>
+        <sheet usage="{{wisdom:modifier}}/Long Rest">
+            <description>
+            <p>After you take damage from a creature you can see within 30 feet of you, you may use your reaction to strike back with sharp rocks from your skin. That creature must succeed on a DC{{spellcasting:dc}} Dexterity Saving or take 2d8 + {{wisdom:modifier}} magical piercing damage.</p>
+            </description>
+        </sheet>
+    </element>
+    <element name="Wrath of the Mountain" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_WRATH_OF_THE_MOUNTAIN">
+        <description>
+            <p>At 14th level, before or after using Avalanche, you may cast a spell that has a casting time of an action as a bonus action. If you expend a spell slot when using this feature, you also gain a number of temporary hit points equal to the spell’s level plus your Wisdom modifier.</p>
+        </description>
+        <sheet>
+            <description>
+            <p>Before or after using Avalanche, you may cast a spell that has a casting time of an action as a bonus action. If you expend a spell slot when using this feature, you also gain a temporary hit points equal to the spell’s level {{wisdom:modifier}}.</p>
+            </description>
+        </sheet>
+    </element>
+</elements>
