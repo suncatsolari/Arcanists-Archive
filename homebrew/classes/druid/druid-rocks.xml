@@ -55,14 +55,16 @@
             <description>
             As a bonus action, you may expend one use of your Wild Shape. For the next 10 minutes or until you expend another Wild Shape, you gain the following benefits:&#13;
             You deal {{wisdom:modifier}} additional damage with melee weapon attacks and unarmed attacks&#13;
-            You gain an unarmed attack which deals 1d6 bludgeoning, piercing or slashing damage (your choice when you enter the form). This damage increases to 1d8 at 6th level in this subclass, and 1d10 at 14th level.&#13;
-            Your current hit points and maximum hit points increase by an amount equal to your Druid level plus your Wisdom modifier&#13;
+            You gain an unarmed attack which deals {{unarmed damage:dice}} bludgeoning, piercing or slashing damage (your choice when you enter the form). This damage increases to 1d8 at 6th level in this subclass, and 1d10 at 14th level.&#13;
+            Your current hit points and maximum hit points increase by &#13;
             </description>
         </sheet>
         <rules>
-            <stat name="unarmed damage:dice" value="6" />
-            <stat name="unarmed damage:dice" value="8" level="6" />
-            <stat name="unarmed damage:dice" value="10" level="14" />
+            <stat name="motm unarmed:dice" value="6" />
+            <stat name="motm unarmed:dice" value="8" level="6" />
+            <stat name="motm unarmed:dice" value="10" level="14" />
+            <stat name="motm hp" value="level:druid:half" />
+            <stat name="motm hp" value="wisdom:modifier" />
         </rules>
     </element>
     <element name="Avalanche" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_AVALANCHE">
