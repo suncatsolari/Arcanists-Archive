@@ -37,8 +37,11 @@
             </description>
         </sheet>
         <rules>
-            <stat name="ac:stoneskin base" value="12" />
-            <stat name="ac:stoneskin" value="ac:stoneskin base" bonus="wisdom:modifier" />
+            <stat name="ac:stoneskin:base" value="12" />
+            <stat name="ac:stoneskin:wisdom" value="wisdom:modifier" />
+            <stat name="ac:stoneskin" value="ac:stoneskin:base"/>
+            <stat name="ac:stoneskin" value="ac:stoneskin:wisdom"/>
+            <stat name="ac:calculation" value="ac:stoneskin" bonus="calculation" equipped="[armor:none]" alt="Stoneskin (Circle of the Rocks Druid)" />
         </rules>
     </element>
     <element name="Might of the Mountain" type="Archetype Feature" source="source" id="ID_AA_ARCHETYPE_FEATURE_CIRCLE_OF_THE_ROCKS_MIGHT_OF_THE_MOUNTAIN">
