@@ -53,10 +53,10 @@
         </description>
         <sheet>
             <description>
-            <p>As a bonus action, you may expend one use of your Wild Shape. For the next 10 minutes or until you expend another Wild Shape, you gain the following benefits:</p>
-            <p class="indent">You deal {{wisdom:modifier}} additional damage with melee weapon attacks and unarmed attacks</p>
-            <p class="indent">You gain an unarmed attack which deals 1d6 bludgeoning, piercing or slashing damage (your choice when you enter the form). This damage increases to 1d8 at 6th level in this subclass, and 1d10 at 14th level.</p>
-            <p class="indent">Your current hit points and maximum hit points increase by an amount equal to your Druid level plus your Wisdom modifier</p>
+            <p>As a bonus action, you may expend one use of your Wild Shape. For the next 10 minutes or until you expend another Wild Shape, you gain the following benefits:</li>
+            <li>You deal {{wisdom:modifier}} additional damage with melee weapon attacks and unarmed attacks</li>
+            <li>You gain an unarmed attack which deals 1d6 bludgeoning, piercing or slashing damage (your choice when you enter the form). This damage increases to 1d8 at 6th level in this subclass, and 1d10 at 14th level.</p>
+            <li>Your current hit points and maximum hit points increase by an amount equal to your Druid level plus your Wisdom modifier</li>
             </description>
         </sheet>
         <rules>
