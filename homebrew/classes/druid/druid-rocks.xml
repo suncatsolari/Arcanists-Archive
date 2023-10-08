@@ -6,7 +6,7 @@
             <file name="druid-rocks.xml" url="https://raw.githubusercontent.com/suncatsolari/Arcanists-Archive/master/homebrew/classes/druid/druid-rocks.xml" />
         </update>
     </info>
-    <element name="Circle of the Rocks" type="Archetype" source="source" id="ID_AA_ARCHETYPE_DRUID_CIRCLE_OF_THE_ROCKS">
+    <element name="Circle of the Rocks" type="Archetype" source="Arcanist's Archives" id="ID_AA_ARCHETYPE_DRUID_CIRCLE_OF_THE_ROCKS">
         <supports>Druid Circle</supports>
         <description>
             <p>Mountains and peaks are a harsh, desolate place, resulting in those who draw power from the stone being able to withstand the harshest punishment nature has to offer. These druids are notoriously brutish and cunning, using their survival wits to thwart enemies and strike down with monumental strength.</p>
