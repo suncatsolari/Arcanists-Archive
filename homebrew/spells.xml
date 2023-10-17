@@ -7,14 +7,14 @@
 		</update>
 	</info>
 
-	<element name="Fire Bolt" type="Spell" source="Player’s Handbook" id="ID_PHB_SPELL_FIRE_BOLT">
-		<supports>Sorcerer, Wizard, Artificer, Ranged, Spell Attack</supports>
+	<element name="Acid Bolt" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_ACID_BOLT">
+		<supports>Artificer, Sorcerer, Warlock, Wizard, Ranged, Spell Attack</supports>
 		<description>
-			<p>You hurl a mote of fire at a creature or object within range. Make a ranged spell attack against the target. On a hit, the target takes 1d10 fire damage. A flammable object hit by this spell ignites if it isn’t being worn or carried.</p>
+			<p>You fire a bolt of acid towards a creature or object within range. Make a ranged spell attack, on a hit the target takes 1d10 acid damage. Objects not being worn or carried take an additional d10 acid damage </p>
 			<p class="indent">This spell’s damage increases by 1d10 when you reach 5th level (2d10), 11th level (3d10), and 17th level (4d10).</p>
 		</description>
 		<setters>
-			<set name="keywords">fire</set>
+			<set name="keywords">acid</set>
 			<set name="level">0</set>
 			<set name="school">Evocation</set>
 			<set name="time">1 action</set>
@@ -28,19 +28,76 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-    <element name="Acid Splash" type="Spell" source="Player’s Handbook" id="ID_PHB_SPELL_ACID_SPLASH">
-		<supports>Sorcerer, Wizard, Artificer, Spell Saving Throw</supports>
+	<element name="Aurora Arrow" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_AURORA_ARROW">
+		<supports>Bard, Druid, Sorcerer, Warlock, Wizard</supports>
 		<description>
-			<p>You hurl a bubble of acid. Choose one creature you can see within range, or choose two creatures you can see within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage.</p>
-			<p class="indent">This spell’s damage increases by 1d6 when you reach 5th level (2d6), 11th level (3d6), and 17th level (4d6).</p>
+			<p>You ready the weapon used in the spell's casting and make a ranged attack with it against a target you see within the weapon's range. In place of ammunition, a mote of colorful, radiant energy forms along your weapon as you motion to attack. On a hit, the attack deals radiant damage instead of piercing. Additionally, a burst of colorful light appears in the area centered on the point the target occupied. This light lasts until the end of your next turn, shedding an aura of bright light in a 5 foot radius, and dim light for an additional 5 feet. An invisible creature in this light is temporarily revealed as the light dances around its silhouette.</p>
+			<p class="indent">If you cast this spell and target a creature standing in light created by this spell, the arrow deals an additional 1d4 radiant damage to the target.</p>
+			<p class="indent">This spell's damage increases when you reach certain levels. At 5th level, the ranged attack deals an extra 1d8 radiant damage to any target on a hit, and the additional damage the target takes if within this spell's light radius increases to 2d4. Both damage rolls increase by an additional die at 11th level (2d8 and 3d4) and again at 17th level (3d8 and 4d4).</p>
 		</description>
 		<setters>
-			<set name="keywords">acid</set>
+			<set name="keywords">radiant</set>
 			<set name="level">0</set>
 			<set name="school">Conjuration</set>
 			<set name="time">1 action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a weapon with the ammunition property worth at least 1 sp</set>
+			<set name="duration">1 round</set>
+		</setters>
+	</element>
+	<element name="Dazzle" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_DAZZLE">
+		<supports>Bard, Spell Saving Throw</supports>
+		<description>
+			<p>A quick tune, loud noise, or exclamation confuses a creature to delay their actions. When another creature within range rolls initiative, you can attempt to Dazzle them. The target creature must succeed a Wisdom saving throw or gain disadvantage on their initiative check. If the creature is immune to being charmed or frightened, they automatically succeed their saving throw.</p>
+		</description>
+		<setters>
+			<set name="level">0</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
 			<set name="duration">Instantaneous</set>
 			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Frost Shot" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_FROST_SHOT">
+		<supports>Druid, Sorcerer, Warlock, Witch, Wizard, Spell Saving Throw</supports>
+		<description>
+			<p>You freeze the moisture of the air around the piece of ammunition or thrown weapon used in the spell's casting and make a ranged weapon attack with it against one creature within 60 feet of you. On a hit, the target suffers the weapon attack's normal effects, and whether it hits or misses, you can cause the ice to shatter with the impact. Each creature within 5 feet of the target you chose (including the target of the attack) must succeed on a dexterity saving throw or 1d4 cold damage and have their speed reduced by 5 feet until the start of your next turn.</p>
+			<p class="indent">This spell's damage increases when you reach certain levels. At 5th level, the ranged attack deals an extra 1d4 cold damage to the target on a hit, and the cold damage to the innitial effect increases to 2d4. Both damage rolls increase by 1d4 at 11th level (2d4 and 3d4) and 17th level (3d4 and 4d4).</p>
+		</description>
+		<setters>
+			<set name="keywords">cold</set>
+			<set name="level">0</set>
+			<set name="school">Evocation</set>
+			<set name="time">1 action</set>
+			<set name="range">60 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a piece of ammunition, or a weapon with the Thrown property, worth at least 1 sp</set>
+			<set name="duration">1 round</set>
+		</setters>
+	</element>
+	<element name="Gentle Scolding" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_GENTLE_SCOLDING">
+		<supports>Bard, Warlock, Spell Saving Throw</supports>
+		<description>
+			<p>You calmly chastise a hostile creature you can see within range. If the target can hear you (though it need not understand you) it must make a Wisdom saving throw against your spell save DC. On a failure, the creature has disadvantage on the next attack roll it makes before the end of your next turn, and the next attack it hits deals 1d4 less damage.</p>
+			<p class="indent">This spell's damage reduction is increased by 1d4 when you reach 6th level (2d4), 10th level (3d4), and 14th level (4d4).</p>
+		</description>
+		<setters>
+			<set name="level">0</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">Instantaneous</set>
+			<set name="range">Touch</set>
 			<set name="hasVerbalComponent">true</set>
 			<set name="hasSomaticComponent">true</set>
 			<set name="hasMaterialComponent">false</set>
@@ -49,25 +106,102 @@
 			<set name="isRitual">false</set>
 		</setters>
 	</element>
-    <element name="Alarm" type="Spell" source="Player’s Handbook" id="ID_PHB_SPELL_ALARM">
-		<supports>Ranger, Wizard, Artificer</supports>
+	<element name="Helping Hands" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_HELPING_HANDS">
+		<supports>Bard</supports>
 		<description>
-			<p>You set an alarm against unwanted intrusion. Choose a door, a window, or an area within range that is no larger than a 20-foot cube. Until the spell ends, an alarm alerts you whenever a tiny or larger creature touches or enters the warded area. When you cast the spell, you can designate creatures that won’t set off the alarm. You also choose whether the alarm is mental or audible.</p>
-			<p class="indent">A mental alarm alerts you with a ping in your mind if you are within 1 mile of the warded area. This ping awakens you if you are sleeping.</p>
-			<p class="indent">An audible alarm produces the sound of a hand bell for 10 seconds within 60 feet.</p>
+			<p>Two spectral, floating hands appear at a point you choose within range. These hands can look however you desire, and move in a rhythmic and animated manner, occasionally having their own sentience. The hands last for the duration or until you dismiss them as an action. The hands vanish if they are ever more than 15 feet away from you or if you cast this spell again.</p>
+			<p class="indent">You can use your bonus action to control the hands. You can use the hands to manipulate an object, open an unlocked door or container, stow or retrieve an item from an open container, or pour the contents out of a vial. They can manipulate any object so long as it is in the area.</p>
+			<p class="indent">The hands can't attack, activate magic items, or carry more than 20 pounds.</p>
 		</description>
 		<setters>
-			<set name="keywords"></set>
-			<set name="level">1</set>
-			<set name="school">Abjuration</set>
-			<set name="time">1 minute</set>
-			<set name="duration">8 hours</set>
-			<set name="range">30 feet</set>
+			<set name="level">0</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 bonus action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">60 feet</set>
 			<set name="hasVerbalComponent">true</set>
-			<set name="hasSomaticComponent">true</set>
-			<set name="hasMaterialComponent">true</set>
-			<set name="materialComponent">a tiny bell and a piece of fine silver wire</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
 			<set name="isConcentration">false</set>
-			<set name="isRitual">true</set>
+			<set name="isRitual">false</set>
 		</setters>
 	</element>
+	<element name="Lullaby" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_LULLABY">
+		<supports>Bard, Spell Saving Throw</supports>
+		<description>
+			<p>You sing, play, whisper, or make rhythmic sounds to lull a creature to a sleepy state. Choose one creature within range, it must be able to hear you. The creature must succeed a Wisdom saving throw or become drowsy and inattentive, gaining disadvantage on perception and insight checks. Creatures that fail this saving throw are unaware they have been magically influenced. The target can re-make the save at the end of each of their turns. If the target fails 3 saves in a row, they fall unconscious for 1 minute. The effect ends if the target takes damage</p>
+		</description>
+		<setters>
+			<set name="level">0</set>
+			<set name="school">Enchantment</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 minute</set>
+			<set name="range">30 feet</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Spoken Ward" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_SPOKEN_WARD">
+		<supports>Bard</supports>
+		<description>
+			<p>An emotional word, phrase, or melody protects all those around you. When an attack or harmful effect would target one creature in a 10ft radius originating from ,you, that creature gains resistance to that damage. The spell ends once any creature in the area takes damage.</p>
+			<p class="indent">The number of attacks or effects you can resist with this spell increases by 1 when you reach 5th level (2), 11th level (3), and 17th level (4)</p>
+		</description>
+		<setters>
+			<set name="level">0</set>
+			<set name="school">Abjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">One round, or until triggered or dispelled</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Summon Instrument" type="Spell" source="Arcanist's Archive" id="ID_AA_SPELL_SUMMON_INSTRUMENT">
+		<supports>Bard</supports>
+		<description>
+			<p>Typically casted by rhyming your vocal component with the instrument you intend to summon, an instrument of your choice appears in your hands or at your feet (your choice). Only one instrument appears per casting. The summoned instrument disappears at the end of this spell, or if you summon another instrument.</p>
+		</description>
+		<setters>
+			<set name="level">0</set>
+			<set name="school">Conjuration</set>
+			<set name="time">1 action</set>
+			<set name="duration">1 hour</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">true</set>
+			<set name="hasSomaticComponent">false</set>
+			<set name="hasMaterialComponent">false</set>
+			<set name="materialComponent" />
+			<set name="isConcentration">false</set>
+			<set name="isRitual">false</set>
+		</setters>
+	</element>
+	<element name="Vantage's Actually Useful True Strike" type="Spell" source="Arcanist's Archives" id="ID_AA_SPELL_VANTAGES_ACTUALLY_USEFUL_TRUE_STRIKE">
+		<supports>Artificer, Bard, Sorcerer, Warlock, Wizard, Witch</supports>
+		<description>
+			<p>You brandish the weapon used in the spell’s casting and make a weapon attack with it against a target within the weapon’s reach which you can see. If you are proficient with the weapon used, the attack ignores disadvantage. On a hit, the target suffers the weapon attack’s normal effects and then becomes marked by a glowing aura of divination magic until the end of your next turn. If an attack targets the creature before then, add 1d4 to the attack roll, and the spell ends.</p>
+			<p class="indent">At Higher Levels. At 5th level, the initial melee attack deals an extra 1d6 psychic damage to the target on a hit, which increases by d6 at 11th level (2d6) and 17th level (3d6).</p>
+		</description>
+		<setters>
+			<set name="keywords">psychic</set>
+			<set name="level">0</set>
+			<set name="school">Divination</set>
+			<set name="time">1 action</set>
+			<set name="range">Self</set>
+			<set name="hasVerbalComponent">false</set>
+			<set name="hasSomaticComponent">true</set>
+			<set name="hasMaterialComponent">true</set>
+			<set name="materialComponent">a weapon worth at least 1 sp</set>
+			<set name="duration">1 round</set>
+		</setters>
+	</element>
+	
